@@ -25,7 +25,7 @@
   <body>
     <header>
       <div class="header_login">
-        <a href="" onclick="history.back()">
+        <a href="../index.html">
           <img src="../asset/img/LOGO.png" class="logo" alt="" />
         </a>
       </div>
@@ -63,7 +63,6 @@
                 </div>
               </div>
             </td>
-            <td></td>
           </tr>
           <tr id="confirmPasswordRow" style="display: none">
             <td>
@@ -98,7 +97,8 @@
           </tr>
         </table>
       </form>
-      <br /><br />
+
+      <!-- 其他登入方式 -->
       <nav>
         <ul>
           <p style="font-size: 1.25rem; color: #717171; text-align: center">
@@ -162,8 +162,7 @@
       function switchToRegister() {
         document.getElementById("formTitle").innerText = "註冊帳號";
         document.getElementById("formButton").value = "註冊";
-        document.getElementById("confirmPasswordRow").style.display =
-          "table-row";
+        document.getElementById("confirmPasswordRow").style.display = "block";
         document.getElementById("accountLink").innerHTML =
           '已有帳號嗎？ <a href="#" onclick="switchToLogin()">登入</a>';
       }

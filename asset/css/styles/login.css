@@ -13,7 +13,7 @@ body {
 }
 
 header {
-  height: 10vh;
+  max-height: 10vh;
 }
 header div.header_login {
   display: flex;
@@ -30,7 +30,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  min-height: 90vh;
+  max-height: 90vh;
 }
 main form table {
   font-size: 1.25rem;
@@ -80,6 +80,7 @@ main form table tr td #formButton {
   width: 100%;
   font-size: 1.25rem;
   padding: 0.5rem;
+  border: none;
   cursor: pointer;
 }
 main form table tr td a {
@@ -121,7 +122,6 @@ main nav ul li a:hover {
 }
 main footer {
   margin-top: 2rem;
-  float: bottom;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -142,6 +142,7 @@ main footer div.link a:hover {
 
 @media screen and (max-width: 525px) {
   main {
+    overflow: hidden;
     margin: auto;
   }
   main form table {
@@ -231,7 +232,6 @@ main footer div.link a:hover {
   }
   main footer {
     margin-top: 1rem;
-    float: bottom;
     display: flex;
     justify-content: center;
     align-items: center;

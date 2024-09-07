@@ -13,7 +13,7 @@ body {
 }
 
 header {
-  height: 10vh;
+  max-height: 10vh;
   div.header_login {
     display: flex;
     justify-content: center;
@@ -30,7 +30,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  min-height: 90vh;
+  max-height: 90vh;
   form {
     table {
       font-size: 1.25rem;
@@ -77,6 +77,8 @@ main {
             width: 100%;
             font-size: 1.25rem;
             padding: 0.5rem;
+
+            border: none;
             cursor: pointer;
           }
           a {
@@ -90,7 +92,7 @@ main {
       }
     }
   }
-
+  //其他登入方式
   nav {
     padding-bottom: 1rem;
     ul {
@@ -123,7 +125,6 @@ main {
   }
   footer {
     margin-top: 2rem;
-    float: bottom;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -145,6 +146,7 @@ main {
 
 @media screen and (max-width: 525px) {
   main {
+    overflow: hidden;
     margin: auto;
     form {
       table {
@@ -235,7 +237,6 @@ main {
     }
     footer {
       margin-top: 1rem;
-      float: bottom;
       display: flex;
       justify-content: center;
       align-items: center;
