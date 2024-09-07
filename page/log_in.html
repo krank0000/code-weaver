@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CODE WEAVER | AI系統紡織機</title>
+    <meta name="description" content="" />
+    <base target="_self" />
+    <!-- icon -->
+    <link rel="shortcut icon" href="" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../asset/css/styles/login.css" />
+    <!-- google fonts -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+    </style>
+    <!-- jquery -->
+    <script src="./asset/js/jquery-3.7.1.min.js"></script>
+    <!-- fontawesome icon -->
+    <script
+      src="https://kit.fontawesome.com/69620c78e7.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="header_login">
+        <a href="" onclick="history.back()">
+          <img src="../asset/img/LOGO.png" class="logo" alt="" />
+        </a>
+      </div>
+    </header>
+    <main>
+      <form action="">
+        <table>
+          <tr>
+            <th colspan="2" id="formTitle">歡迎回來</th>
+          </tr>
+          <tr>
+            <td>
+              <div class="input">
+                <p>Email</p>
+                <input type="text" placeholder="請輸入Email..." required />
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="input">
+                <p>Password</p>
+                <div style="display: flex; align-items: center">
+                  <input
+                    type="password"
+                    class="password-input"
+                    placeholder="輸入密碼..."
+                    required
+                  />
+                  <i
+                    class="fa-solid fa-eye-slash toggle-password"
+                    id="eyeIcon"
+                    onclick="togglePasswordVisibility('myPassword', 'eyeIcon')"
+                  ></i>
+                </div>
+              </div>
+            </td>
+            <td></td>
+          </tr>
+          <tr id="confirmPasswordRow" style="display: none">
+            <td>
+              <div class="input">
+                <p>Confirm Password</p>
+                <div style="display: flex; align-items: center">
+                  <input
+                    type="password"
+                    class="password-input"
+                    placeholder="再次輸入密碼..."
+                    required
+                  />
+                  <i
+                    class="fa-solid fa-eye-slash toggle-password"
+                    id="eyeIcon"
+                    onclick="togglePasswordVisibility('confirmPassword', 'confirmEyeIcon')"
+                  ></i>
+                </div>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <input type="submit" value="登入" id="formButton" />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" style="color: rgb(151, 151, 151)" id="accountLink">
+              沒有帳號嗎？ <a href="#" onclick="switchToRegister()">註冊</a>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <br /><br />
+      <nav>
+        <ul>
+          <p style="font-size: 1.25rem; color: #717171; text-align: center">
+            or
+          </p>
+          <li>
+            <a href="">
+              <i class="fa-brands fa-google"></i>
+              使用Google登入
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="fa-brands fa-microsoft"></i>
+              使用Microsoft帳號登入
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="fa-brands fa-apple"></i>
+              使用Apple帳戶登入
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <footer>
+        <div class="link">
+          <a href="">使用條款</a>
+          <p>｜</p>
+          <a href="">隱私權政策</a>
+        </div>
+      </footer>
+    </main>
+    <!-- JavaScript -->
+    <!-- 密碼顯示/隱藏 -->
+    <script>
+      function togglePasswordVisibility() {
+        const passwordInputs = document.querySelectorAll(".password-input");
+        const eyeIcons = document.querySelectorAll(".toggle-password");
+
+        for (let i = 0; i < passwordInputs.length; i++) {
+          const passwordInput = passwordInputs[i];
+          const eyeIcon = eyeIcons[i];
+
+          eyeIcon.addEventListener("click", function () {
+            if (passwordInput.type === "password") {
+              passwordInput.type = "text";
+              eyeIcon.className = "fa-solid fa-eye toggle-password";
+            } else {
+              passwordInput.type = "password";
+              eyeIcon.className = "fa-solid fa-eye-slash toggle-password";
+            }
+          });
+        }
+      }
+
+      // 初始化顯示/隱藏密碼功能
+      togglePasswordVisibility();
+
+      // 登入/註冊切換
+      function switchToRegister() {
+        document.getElementById("formTitle").innerText = "註冊帳號";
+        document.getElementById("formButton").value = "註冊";
+        document.getElementById("confirmPasswordRow").style.display =
+          "table-row";
+        document.getElementById("accountLink").innerHTML =
+          '已有帳號嗎？ <a href="#" onclick="switchToLogin()">登入</a>';
+      }
+
+      function switchToLogin() {
+        document.getElementById("formTitle").innerText = "歡迎回來";
+        document.getElementById("formButton").value = "登入";
+        document.getElementById("confirmPasswordRow").style.display = "none";
+        document.getElementById("accountLink").innerHTML =
+          '沒有帳號嗎？ <a href="#" onclick="switchToRegister()">註冊</a>';
+      }
+    </script>
+  </body>
+
+  <script src="./asset/js/app.js"></script>
+</html>

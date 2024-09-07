@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+html,
+body {
+  background-color: #2c292d;
+  min-height: 100vh;
+  color: white;
+}
+
+header {
+  height: 10vh;
+}
+header div.header_login {
+  display: flex;
+  justify-content: center;
+  width: auto;
+}
+header div.header_login img {
+  width: 300px;
+  margin: 1rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 90vh;
+}
+main form table {
+  font-size: 1.25rem;
+}
+main form table tr {
+  margin-top: 2px;
+}
+main form table tr th {
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 1.75rem;
+  font-weight: normal;
+  letter-spacing: 0.25rem;
+}
+main form table tr td {
+  text-align: center;
+  padding: 0.5rem;
+}
+main form table tr td div.input {
+  background-color: #a0a0a0;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  border-radius: 7px;
+  padding: 0.5rem 0.75rem;
+}
+main form table tr td div.input p {
+  font-size: 1rem;
+  color: #454545;
+}
+main form table tr td div.input input {
+  background-color: #a0a0a0;
+  color: #000000;
+  border: none;
+  font-size: 1.25rem;
+}
+main form table tr td div.input input:focus {
+  outline: none;
+}
+main form table tr td i {
+  cursor: pointer;
+  color: #454545;
+  margin-left: 0.5rem;
+}
+main form table tr td #formButton {
+  border-radius: 7px;
+  width: 100%;
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+main form table tr td a {
+  text-decoration: none;
+  color: rgb(177, 75, 75);
+}
+main form table tr td a:hover {
+  color: rgb(255, 114, 114);
+}
+main nav {
+  padding-bottom: 1rem;
+}
+main nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+main nav ul li {
+  margin: 0.5rem 0 0 0;
+}
+main nav ul li a {
+  display: flex;
+  align-items: center;
+  width: auto;
+  padding: 0.7rem 3rem;
+  font-size: 1.25rem;
+  border-radius: 7px;
+  border: #a0a0a0 solid 1.5px;
+  text-decoration: none;
+  color: white;
+}
+main nav ul li a i {
+  margin-right: 0.75rem;
+}
+main nav ul li a:hover {
+  background-color: #a0a0a0;
+  border: #a0a0a0 solid 1.5px;
+  transition: all 0.3s ease;
+}
+main footer {
+  margin-top: 2rem;
+  float: bottom;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main footer div.link {
+  display: flex;
+  color: #717171;
+}
+main footer div.link a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #717171;
+}
+main footer div.link a:hover {
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 525px) {
+  main {
+    margin: auto;
+  }
+  main form table {
+    font-size: 1rem;
+  }
+  main form table tr {
+    display: flex;
+    flex-direction: column;
+    margin: 1px 5px;
+  }
+  main form table tr th {
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: normal;
+    letter-spacing: 0.25rem;
+  }
+  main form table tr td {
+    text-align: center;
+    padding: 0.25rem;
+  }
+  main form table tr td div.input {
+    background-color: #a0a0a0;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    border-radius: 7px;
+    padding: 0.5rem 0.5rem;
+  }
+  main form table tr td div.input p {
+    font-size: 0.75rem;
+    color: #454545;
+  }
+  main form table tr td div.input input {
+    background-color: #a0a0a0;
+    color: #000000;
+    border: none;
+    font-size: 1rem;
+    width: 100%;
+  }
+  main form table tr td i {
+    cursor: pointer;
+    color: #454545;
+  }
+  main form table tr td button {
+    border-radius: 7px;
+    font-size: 1rem;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+  main form table tr td a {
+    text-decoration: none;
+    color: rgb(177, 75, 75);
+  }
+  main form table tr td a:hover {
+    color: rgb(255, 114, 114);
+  }
+  main nav {
+    padding-bottom: 1rem;
+  }
+  main nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+  }
+  main nav ul li {
+    margin: 0.5rem 0 0 0;
+  }
+  main nav ul li a {
+    display: flex;
+    align-items: center;
+    width: auto;
+    padding: 0.7rem 3rem;
+    font-size: 1rem;
+    border-radius: 7px;
+    border: #a0a0a0 solid 1.5px;
+    text-decoration: none;
+    color: white;
+  }
+  main nav ul li a i {
+    margin-right: 0.75rem;
+  }
+  main nav ul li a:hover {
+    background-color: #a0a0a0;
+    border: #a0a0a0 solid 1.5px;
+    transition: all 0.3s ease;
+  }
+  main footer {
+    margin-top: 1rem;
+    float: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main footer div.link {
+    display: flex;
+    color: #717171;
+  }
+  main footer div.link a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #717171;
+  }
+  main footer div.link a:hover {
+    color: #ffffff;
+    transition: all 0.3s ease;
+  }
+}/*# sourceMappingURL=login.css.map */

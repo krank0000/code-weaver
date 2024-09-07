@@ -1,0 +1,422 @@
+@charset "UTF-8";
+* {
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+* ::-webkit-scrollbar {
+  width: 10px;
+}
+* ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+* ::-webkit-scrollbar-thumb {
+  background: #888;
+}
+* ::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+main {
+  max-height: 85vh;
+  display: flex;
+}
+main section.content {
+  flex: 7;
+  padding: 1rem 3.5rem 1rem 3rem;
+}
+main section.content div.main_content div.main_index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+main section.content div.main_content div.main_index div.chat_area {
+  width: 80%;
+  margin-top: 2rem;
+  max-height: 68vh;
+  overflow: auto;
+  overflow-x: hidden;
+  padding: 1rem 2rem;
+}
+main section.content div.main_content div.main_index div.chat_area section.chat {
+  margin-top: 1rem;
+  display: flex;
+  align-items: self-start;
+}
+main section.content div.main_content div.main_index div.chat_area section.chat article {
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+}
+main section.content div.main_content div.main_index div.message {
+  position: fixed;
+  bottom: 2rem;
+  left: 58%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 60%; /* 控制輸入區域的寬度 */
+  padding: 0.15rem 0.5rem;
+  border: #929292 2px solid;
+  border-radius: 20px;
+  background-color: #2c292d;
+}
+main section.content div.main_content div.main_index div.message #message_text {
+  width: 83%; /* 控制輸入框的寬度 */
+  border: none;
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  border-radius: 20px;
+  background-color: #2c292d;
+  color: #ffffff;
+  resize: none; /* 禁用手動調整大小 */
+  overflow: hidden; /* 隱藏滾動條 */
+}
+main section.content div.main_content div.main_index div.message #message_text:focus {
+  outline: none;
+}
+main section.content div.main_content div.main_index div.message #message_send {
+  border: none;
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  border-radius: 20px;
+  background-color: #2c292d;
+  color: #929292;
+}
+main section.content div.main_content div.main_index div.message #message_send:focus {
+  outline: none;
+}
+main section.content div.main_content div.main_index div.message #message_send:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease;
+}
+main section.content div.main_content div.switch_requirement div.main_requirement {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+main section.content div.main_content div.switch_requirement div.main_requirement h1 {
+  color: #ffffff;
+  font-weight: normal;
+  letter-spacing: 1.5rem;
+  font-size: 2rem;
+}
+main section.content div.main_content div.switch_requirement div.main_requirement div.document_area {
+  background-color: #222222;
+  border: #c5c5c5 2px solid;
+  color: #ffffff;
+  width: 80%;
+  margin-top: 2rem;
+  padding: 1rem 1.5rem;
+  border-radius: 25px;
+}
+main section.content div.main_content div.switch_requirement div.main_requirement div.document_area .document {
+  overflow: auto;
+  overflow-x: hidden;
+  max-height: 55vh;
+  padding: 1rem;
+}
+main section.content div.main_content div.switch_requirement div.main_requirement section {
+  margin-top: 2rem;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+main section.content div.main_content div.switch_requirement div.main_requirement section input {
+  border: none;
+  font-size: larger;
+  padding: 0.25rem 1rem;
+  border-radius: 30px;
+  letter-spacing: 0.25rem;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+}
+main section.content div.main_content div.switch_requirement div.main_requirement section input:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease;
+}
+main section.content div.main_content div.switch_requirement div.main_requirement section .back_btn {
+  background-color: #777777;
+}
+main section.content div.main_content div.switch_requirement div.main_requirement section .start_btn {
+  background-color: #78c576;
+}
+main section.content div.main_content div.switch_system div.main_system {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+main section.content div.main_content div.switch_system div.main_system h1 {
+  color: #ffffff;
+  font-weight: normal;
+  letter-spacing: 1.5rem;
+  font-size: 2rem;
+}
+main section.content div.main_content div.switch_system div.main_system div.document_area {
+  background-color: #222222;
+  border: #c5c5c5 2px solid;
+  color: #ffffff;
+  width: 80%;
+  margin-top: 2rem;
+  padding: 1rem 1.5rem;
+  border-radius: 25px;
+}
+main section.content div.main_content div.switch_system div.main_system div.document_area .document {
+  overflow: auto;
+  overflow-x: hidden;
+  max-height: 55vh;
+  padding: 1rem;
+}
+main section.content div.main_content div.switch_system div.main_system section {
+  margin-top: 2rem;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+main section.content div.main_content div.switch_system div.main_system section input {
+  border: none;
+  font-size: larger;
+  padding: 0.25rem 1rem;
+  border-radius: 30px;
+  letter-spacing: 0.25rem;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+}
+main section.content div.main_content div.switch_system div.main_system section input:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease;
+}
+main section.content div.main_content div.switch_system div.main_system section .back_btn {
+  background-color: #777777;
+}
+main section.content div.main_content div.switch_system div.main_system section .start_btn {
+  background-color: #78c576;
+}
+main section.content div.main_content div.switch_loading_area div.loading_area {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+}
+main section.content div.main_content div.switch_loading_area div.loading_area h1 {
+  color: #ffffff;
+  font-weight: normal;
+  letter-spacing: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+}
+main section.content div.main_content div.switch_loading_area div.loading_area div.loading_bar_area {
+  margin-top: 2rem;
+  background-color: #7d7d7d;
+  border-radius: 1rem;
+  width: 80%;
+  height: 1rem;
+  overflow: hidden;
+}
+main section.content div.main_content div.switch_loading_area div.loading_area div.loading_bar_area div.loading_bar {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  width: 80%;
+  height: 1rem;
+}
+main section.content div.main_content div.switch_loading_area div.loading_area article {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 78%;
+  max-height: 35vh;
+  min-height: 5vh;
+  padding: 1rem 2rem 1rem 1.5rem;
+  margin: 1rem 0 2rem 0;
+  overflow: auto;
+}
+main section.content div.main_content div.switch_loading_area div.loading_area article section {
+  padding-bottom: 0.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+main section.content div.main_content div.switch_loading_area div.loading_area article section div {
+  display: flex;
+  align-items: center;
+}
+main section.content div.main_content div.switch_loading_area div.loading_area article section div i {
+  margin-right: 0.75rem;
+}
+main section.content div.main_content div.switch_loading_area div.loading_area input {
+  margin-top: 2rem;
+  border: none;
+  font-size: larger;
+  padding: 0.25rem 1rem;
+  border-radius: 30px;
+  letter-spacing: 0.25rem;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #777777;
+}
+main section.content div.main_content div.switch_loading_area div.loading_area input:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 1140px) {
+  main section.content div.main_content div.main_index div.chat_area {
+    width: 100%;
+    margin-top: 2.5rem;
+    max-height: 70vh;
+    padding: 1rem 0rem 3rem 0rem;
+  }
+  main section.content div.main_content div.main_index div.chat_area section.chat img.chat_icon {
+    width: 30px;
+  }
+  main section.content div.main_content div.main_index div.chat_area section.chat article {
+    font-size: smaller;
+    padding: 0.5rem 0.75rem;
+  }
+  main section.content div.main_content div.main_index div.message {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 50%;
+    width: 80%; /* 控制輸入區域的寬度 */
+  }
+  main section.content div.main_content div.main_index div.message #message_text {
+    width: 83%; /* 控制輸入框的寬度 */
+    border: none;
+    font-size: 1rem;
+  }
+  main section.content div.main_content div.switch_requirement div.main_requirement {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  main section.content div.main_content div.switch_requirement div.main_requirement h1 {
+    color: #ffffff;
+    font-weight: normal;
+    letter-spacing: 0.5rem;
+    font-size: 1.5rem;
+  }
+  main section.content div.main_content div.switch_requirement div.main_requirement div.document_area {
+    background-color: #222222;
+    border: #c5c5c5 2px solid;
+    color: #ffffff;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem 0.5rem;
+    border-radius: 10px;
+  }
+  main section.content div.main_content div.switch_requirement div.main_requirement div.document_area .document {
+    overflow: auto;
+    overflow-x: hidden;
+    max-height: 55vh;
+    padding: 0.75rem;
+    font-size: smaller;
+  }
+  main section.content div.main_content div.switch_requirement div.main_requirement section {
+    margin-top: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  main section.content div.main_content div.switch_requirement div.main_requirement section input {
+    border: none;
+    font-size: normal;
+    padding: 0.25rem 1rem;
+    border-radius: 30px;
+    letter-spacing: 0.25rem;
+  }
+  main section.content div.main_content div.switch_system div.main_system {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  main section.content div.main_content div.switch_system div.main_system h1 {
+    color: #ffffff;
+    font-weight: normal;
+    letter-spacing: 0.5rem;
+    font-size: 1.5rem;
+  }
+  main section.content div.main_content div.switch_system div.main_system div.document_area {
+    background-color: #222222;
+    border: #c5c5c5 2px solid;
+    color: #ffffff;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem 0.5rem;
+    border-radius: 10px;
+  }
+  main section.content div.main_content div.switch_system div.main_system div.document_area .document {
+    overflow: auto;
+    overflow-x: hidden;
+    max-height: 55vh;
+    padding: 0.75rem;
+    font-size: smaller;
+  }
+  main section.content div.main_content div.switch_system div.main_system section {
+    margin-top: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  main section.content div.main_content div.switch_system div.main_system section input {
+    border: none;
+    font-size: normal;
+    padding: 0.25rem 1rem;
+    border-radius: 30px;
+    letter-spacing: 0.25rem;
+  }
+  main section.content div.main_content div.switch_loading_area div.loading_area h1 {
+    font-size: 1.25rem;
+    letter-spacing: 1rem;
+  }
+  main section.content div.main_content div.switch_loading_area div.loading_area div.loading_bar_area {
+    margin-top: 2rem;
+    background-color: #7d7d7d;
+    border-radius: 1rem;
+    width: 100%;
+    height: 1rem;
+    overflow: hidden;
+  }
+  main section.content div.main_content div.switch_loading_area div.loading_area div.loading_bar_area div.loading_bar {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    width: 80%;
+    height: 1rem;
+  }
+  main section.content div.main_content div.switch_loading_area div.loading_area article {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-height: 35vh;
+    min-height: 5vh;
+    padding: 1rem 0.75rem 1rem 1rem;
+    margin: 1rem 0 2rem 0;
+    overflow: auto;
+  }
+  main section.content div.main_content div.switch_loading_area div.loading_area article section {
+    padding-bottom: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  main section.content div.main_content div.switch_loading_area div.loading_area article section div {
+    display: flex;
+    align-items: center;
+  }
+  main section.content div.main_content div.switch_loading_area div.loading_area article section div i {
+    margin-right: 0.75rem;
+  }
+}/*# sourceMappingURL=page.css.map */
