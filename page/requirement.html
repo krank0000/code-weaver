@@ -233,7 +233,7 @@
         <!-- 主要內容 -->
         <div class="main_content">
           <!-- 首頁內容 -->
-          <div class="switch_requirement">
+          <div class="switch_requirement switch_div">
             <div class="main_requirement">
               <h1>需求規格書</h1>
               <div class="document_area">
@@ -301,7 +301,7 @@
                   type="button"
                   class="main_btn start_btn"
                   value="下一步"
-                  onclick='location.href=("./system.html")'
+                  onclick="switchDiv()"
                 />
               </section>
             </div>
@@ -314,12 +314,15 @@
                 <div class="loading_bar"></div>
               </div>
               <article></article>
-              <input
-                type="button"
-                class="main_btn back_btn"
-                value="返回"
-                onclick='location.href=("../index.html")'
-              />
+              <div class="loading_btn_area">
+                <input
+                  type="button"
+                  class="loading_btn back_btn"
+                  value="取消返回"
+                  onclick="goBack()"
+                />
+              </div>
+              <p class="show_loadingP" style="display: none">自動跳轉</p>
             </div>
           </div>
         </div>

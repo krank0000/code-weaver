@@ -62,3 +62,99 @@ textarea.addEventListener("input", function () {
   // 根據內容自動調整高度
   textarea.style.height = textarea.scrollHeight + "px";
 });
+
+// 首頁loading切換
+// 更新每個 section 狀態的函數
+function updateSection(section, delay) {
+  setTimeout(() => {
+    const checkIcon = section.querySelector("i");
+    const statusText = section.querySelector("p:last-of-type");
+
+    checkIcon.style.display = "inline"; // 顯示勾號圖示
+    statusText.textContent = "已完成"; // 更新文字
+  }, delay);
+}
+
+// 切換到 loading_area 的功能
+function switchDiv() {
+  var indexDiv = document.querySelector(".switch_div");
+  var loadingDiv = document.querySelector(".switch_loading_area");
+  var loadingTitle = document.querySelector(".loading_area h1"); // 取得 h1 元素
+  var loadingBtnArea = document.querySelector(".loading_btn_area"); // 取得 loading_btn_area 區域
+  var currentUrl = window.location.href; // 取得當前 URL
+
+  if (indexDiv) {
+    indexDiv.style.display = "none"; // 隱藏 switch_index
+  }
+
+  if (loadingDiv) {
+    loadingDiv.style.display = "block"; // 顯示 switch_loading_area
+  }
+
+  if (currentUrl.includes("system.html")) {
+    // 當前頁面為 system.html 時的操作
+
+    // 3秒後修改 <h1> 標題
+    setTimeout(function () {
+      if (loadingTitle) {
+        loadingTitle.textContent = "程式碼生成完成"; // 修改 h1 標題
+      }
+
+      // 修改按鈕為「檢視程式碼」
+      if (loadingBtnArea) {
+        loadingBtnArea.innerHTML = `
+            <input
+              type="button"
+              class="loading_btn back_btn"
+              id="loading_codebtn"
+              value="檢視程式碼"
+              onclick=""
+            />
+          `;
+      }
+    }, 3000); // 3秒後執行
+
+    // 更新進度條顯示，每隔600ms更新一個section狀態
+    const sections = document.querySelectorAll("#progress-article section");
+    sections.forEach((section, index) => {
+      updateSection(section, index * 600); // 每隔600ms更新一個section狀態
+    });
+  } else {
+    // 當前頁面為 index.html 或 requirement.html 時
+
+    // 1.9秒後修改 <h1> 標題和新增 <p>
+    setTimeout(function () {
+      if (loadingTitle) {
+        loadingTitle.textContent = "生成完畢"; // 修改 h1 標題
+      }
+      // 新增 <p> 自動跳轉
+      var showParagraph = document.querySelector(".show_loadingP");
+      showParagraph.style.display = "block";
+    }, 1900); // 1.9秒後執行
+
+    // 根據當前頁面決定跳轉
+    setTimeout(function () {
+      if (currentUrl.includes("index.html")) {
+        // 從 index.html 跳轉到 requirement.html
+        window.location.href = "./page/requirement.html";
+      } else if (currentUrl.includes("requirement.html")) {
+        // 從 requirement.html 跳轉到 system.html
+        window.location.href = "system.html";
+      }
+    }, 2900); // 2.9秒後執行
+  }
+}
+
+// 返回 switch_index 的功能
+function goBack() {
+  var indexDiv = document.querySelector(".switch_div");
+  var loadingDiv = document.querySelector(".switch_loading_area");
+
+  if (loadingDiv) {
+    loadingDiv.style.display = "none"; // 隱藏 switch_loading_area
+  }
+
+  if (indexDiv) {
+    indexDiv.style.display = "block"; // 顯示 switch_index
+  }
+}

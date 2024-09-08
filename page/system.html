@@ -233,7 +233,7 @@
         <!-- 主要內容 -->
         <div class="main_content">
           <!-- 首頁內容 -->
-          <div class="switch_system" style="display: none">
+          <div class="switch_system switch_div">
             <div class="main_system">
               <h1>系統規格書</h1>
               <div class="document_area">
@@ -301,28 +301,28 @@
                   type="button"
                   class="main_btn start_btn"
                   value="開始生成"
-                  onclick='location.href=("#")'
+                  onclick="switchDiv()"
                 />
               </section>
             </div>
           </div>
           <!-- loading 載入畫面 -->
-          <div class="switch_loading_area">
+          <div class="switch_loading_area" style="display: none">
             <div class="loading_area">
               <h1>開始生成中...</h1>
               <div class="loading_bar_area">
-                <div class="loading_bar"></div>
+                <div class="loading_bar" id="system_loading_bar"></div>
               </div>
-              <article>
+              <article id="progress-article">
                 <!-- 每一個進度 -->
                 <section>
                   <p>Models.py</p>
                   <div>
                     <i
                       class="fa-solid fa-circle-check"
-                      style="color: #63e6be"
+                      style="color: #63e6be; display: none"
                     ></i>
-                    <p>已完成</p>
+                    <p>進行中...</p>
                   </div>
                 </section>
                 <section>
@@ -366,12 +366,14 @@
                   </div>
                 </section>
               </article>
-              <input
-                type="button"
-                class="main_btn back_btn"
-                value="返回"
-                onclick='location.href=("../index.html")'
-              />
+              <div class="loading_btn_area">
+                <input
+                  type="button"
+                  class="loading_btn back_btn"
+                  value="取消返回"
+                  onclick="goBack()"
+                />
+              </div>
             </div>
           </div>
         </div>

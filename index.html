@@ -233,57 +233,95 @@
         <!-- 主要內容 -->
         <div class="main_content">
           <!-- 首頁內容 -->
-          <div class="main_index">
-            <div class="chat_area">
-              <!-- 每一個回覆訊息 -->
-              <section class="chat">
-                <img src="./asset/img/usericon.png" alt="" class="chat_icon" />
-                <article>
-                  <p class="chat_user_name" style="font-weight: bolder">You</p>
-                  <p>Design a database schema for an online merch store.</p>
-                </article>
-              </section>
+          <div class="switch_index switch_div">
+            <div class="main_index">
+              <div class="chat_area">
+                <!-- 每一個回覆訊息 -->
+                <section class="chat">
+                  <img
+                    src="./asset/img/usericon.png"
+                    alt=""
+                    class="chat_icon"
+                  />
+                  <article>
+                    <p class="chat_user_name" style="font-weight: bolder">
+                      You
+                    </p>
+                    <p>Design a database schema for an online merch store.</p>
+                  </article>
+                </section>
 
-              <section class="chat">
-                <img src="./asset/img/GPTicon.png" alt="" class="chat_icon" />
-                <article>
-                  <p class="chat_gpt_name" style="font-weight: bolder">
-                    ChatGPT
-                  </p>
-                  <p>
-                    Designing a database schema for an online merch store
-                    involves defining the structure that will store information
-                    about products, customers, orders, and other relevant
-                    entities. Below is a simplified example of a database schema
-                    for an online merch store: <br />
-                    <br />
-                    1.Entities: <br />
-                    Product: <br />ProductID (Primary Key) <br />Name
-                    <br />Description<br />
-                    Price<br />
-                    StockQuantity<br />
-                    CategoryID (Foreign Key referencing Category table)<br />
-                    Category: <br />CategoryID (Primary Key)<br />
-                    CategoryName <br />Customer: <br />CustomerID (Primary Key)
-                    <br />FirstName <br />LastName <br />Email
-                  </p>
-                </article>
-              </section>
+                <section class="chat">
+                  <img src="./asset/img/GPTicon.png" alt="" class="chat_icon" />
+                  <article>
+                    <p class="chat_gpt_name" style="font-weight: bolder">
+                      ChatGPT
+                    </p>
+                    <p>
+                      Designing a database schema for an online merch store
+                      involves defining the structure that will store
+                      information about products, customers, orders, and other
+                      relevant entities. Below is a simplified example of a
+                      database schema for an online merch store: <br />
+                      <br />
+                      1.Entities: <br />
+                      Product: <br />ProductID (Primary Key) <br />Name
+                      <br />Description<br />
+                      Price<br />
+                      StockQuantity<br />
+                      CategoryID (Foreign Key referencing Category table)<br />
+                      Category: <br />CategoryID (Primary Key)<br />
+                      CategoryName <br />Customer: <br />CustomerID (Primary
+                      Key) <br />FirstName <br />LastName <br />Email
+                    </p>
+                  </article>
+                </section>
+
+                <!-- 結束對話，開始生成需求規格書 -->
+                <div class="chat_btn">
+                  <i class="fa-solid fa-bolt fa-fade fa-lg"></i>
+                  <p>結束對話</p>
+                  <input
+                    type="button"
+                    value="生成規格書"
+                    onclick="switchDiv()"
+                  />
+                </div>
+              </div>
+              <!-- 輸入需求訊息 -->
+              <div class="message">
+                <textarea
+                  name=""
+                  id="message_text"
+                  placeholder="Message  ChatGPT..."
+                  rows="1"
+                ></textarea>
+                <input
+                  type="image"
+                  id="message_send"
+                  src="./asset/img/circle-up-solid.svg"
+                  alt=""
+                />
+              </div>
             </div>
-            <!-- 輸入需求訊息 -->
-            <div class="message">
-              <textarea
-                name=""
-                id="message_text"
-                placeholder="Message  ChatGPT..."
-                rows="1"
-              ></textarea>
-              <input
-                type="image"
-                id="message_send"
-                src="./asset/img/circle-up-solid.svg"
-                alt=""
-              />
+          </div>
+          <!-- loading 載入畫面 -->
+          <div class="switch_loading_area" style="display: none">
+            <div class="loading_area">
+              <h1>開始生成中...</h1>
+              <div class="loading_bar_area">
+                <div class="loading_bar"></div>
+              </div>
+              <article></article>
+              <div class="loading_btn_area">
+                <input
+                  type="button"
+                  class="loading_btn back_btn"
+                  value="取消返回"
+                  onclick="goBack()"
+                />
+              </div>
+              <p class="show_loadingP" style="display: none">自動跳轉</p>
             </div>
           </div>
         </div>
