@@ -68,7 +68,7 @@ textarea.addEventListener("input", function () {
 function updateSection(section, delay) {
   setTimeout(() => {
     const checkIcon = section.querySelector("i");
-    const statusText = section.querySelector("p:last-of-type");
+    const statusText = section.querySelector("p.loading_tense");
 
     checkIcon.style.display = "inline"; // 顯示勾號圖示
     statusText.textContent = "已完成"; // 更新文字
