@@ -232,8 +232,59 @@
         </div>
         <!-- 主要內容 -->
         <div class="main_content">
-          <!-- 首頁內容 -->
-          <div class="main_index"></div>
+          <!-- 資料流上傳內容 -->
+          <div class="switch_dataflow switch_div">
+            <div class="main_dataflow">
+              <section>
+                <img src="../asset/img/scan.svg" alt="" />
+                <input
+                  type="button"
+                  value="測試現存檔案"
+                  class="test_file"
+                  onclick="switchDiv()"
+                />
+              </section>
+              <section>
+                <img src="../asset/img/folder-open.svg" alt="" />
+                <label for="upload">
+                  <input type="file" id="upload" />
+                  <div>上傳本地檔測試</div>
+                </label>
+              </section>
+            </div>
+          </div>
+          <!-- 測試頁面-切換 -->
+          <div class="switch_test" style="display: none">
+            <div class="main_test">
+              <!-- 主內容區塊 -->
+              <div class="test_div">
+                <h1>django_app_test.yml</h1>
+                <p>on:push</p>
+
+                <article>
+                  <!-- 每一個測試結果 -->
+                  <section>
+                    <div>
+                      <i
+                        class="fa-solid fa-circle-xmark"
+                        style="color: #d64c4c"
+                      ></i>
+                      <h3>Test_django_apps</h3>
+                    </div>
+                    <p>20s</p>
+                  </section>
+                </article>
+              </div>
+              <section>
+                <input
+                  type="button"
+                  class="back_btn"
+                  value="取消返回"
+                  onclick="goBack()"
+                />
+              </section>
+            </div>
+          </div>
         </div>
       </section>
     </main>

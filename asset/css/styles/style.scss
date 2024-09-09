@@ -449,7 +449,8 @@ main {
       min-height: 15vh;
       img.logo {
         display: block;
-        height: 10vh;
+        height: 9vh;
+        max-height: 268px;
       }
       .menu_icon_area {
         visibility: visible;

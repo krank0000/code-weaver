@@ -79,6 +79,7 @@ function updateSection(section, delay) {
 function switchDiv() {
   var indexDiv = document.querySelector(".switch_div");
   var loadingDiv = document.querySelector(".switch_loading_area");
+  var testDiv = document.querySelector(".switch_test");
   var loadingTitle = document.querySelector(".loading_area h1"); // 取得 h1 元素
   var loadingBtnArea = document.querySelector(".loading_btn_area"); // 取得 loading_btn_area 區域
   var currentUrl = window.location.href; // 取得當前 URL
@@ -89,6 +90,10 @@ function switchDiv() {
 
   if (loadingDiv) {
     loadingDiv.style.display = "block"; // 顯示 switch_loading_area
+  }
+
+  if (testDiv) {
+    testDiv.style.display = "block"; // 顯示 testDiv
   }
 
   if (currentUrl.includes("system.html")) {
@@ -149,9 +154,13 @@ function switchDiv() {
 function goBack() {
   var indexDiv = document.querySelector(".switch_div");
   var loadingDiv = document.querySelector(".switch_loading_area");
+  var testDiv = document.querySelector(".switch_test");
 
   if (loadingDiv) {
     loadingDiv.style.display = "none"; // 隱藏 switch_loading_area
+  }
+  if (testDiv) {
+    testDiv.style.display = "none"; // 隱藏 testDiv
   }
 
   if (indexDiv) {

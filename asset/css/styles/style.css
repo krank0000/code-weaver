@@ -385,7 +385,8 @@ main section.content div.VSCODE div.vscode_window div.VSCODE_area {
   }
   main aside.menu img.logo {
     display: block;
-    height: 10vh;
+    height: 9vh;
+    max-height: 268px;
   }
   main aside.menu .menu_icon_area {
     visibility: visible;
