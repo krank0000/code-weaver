@@ -121,6 +121,9 @@ main nav ul li a:hover {
   transition: all 0.3s ease;
 }
 main footer {
+  padding-bottom: 1.5rem;
+  position: fixed;
+  bottom: 0;
   margin-top: 2rem;
   display: flex;
   justify-content: center;

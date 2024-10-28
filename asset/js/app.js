@@ -36,16 +36,6 @@ menuIcons.forEach((icon) => {
   });
 });
 
-// 其他功能
-$(document).ready(function () {
-  $(".user").click(function () {
-    // 檢查螢幕寬度是否大於 1140px（桌面模式）
-    if (window.matchMedia("(min-width: 1140px)").matches) {
-      $(".other").toggle();
-    }
-  });
-});
-
 //手機板側邊欄顯示/關閉
 document.getElementById("icon1").addEventListener("click", function () {
   var menuNavFooter = document.querySelector(".menu_nav_footer");

@@ -59,7 +59,6 @@ main {
     flex: 1.75;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     min-height: 85vh;
 
     img.logo {
@@ -132,116 +131,91 @@ main {
         }
       }
     }
-    //側邊導覽列
-    nav.menu_nav {
-      padding: 0 2rem 30% 2rem;
-      ul {
-        list-style: none;
-        li {
-          a {
-            border-radius: 5px;
-            padding: 0.7rem 1.25rem;
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 1.5rem;
-            display: flex;
-            align-items: center;
-            margin: 0.5rem 0;
-            img {
-              width: 1.5vw;
-              margin-right: 1rem;
-            }
-          }
-          a.active {
-            background: linear-gradient(to right, #696969, #00000000);
-          }
-          &:hover {
-            a {
-              transition: all 0.5s ease;
-              background: linear-gradient(to right, #4b4b4b, #00000000);
-            }
-          }
-        }
-      }
-    }
-    //其他功能(彈出視窗)-點選使用者頭像後彈出
-    div.other {
-      display: none;
-      background-color: #676269;
-      border-radius: 10px;
-      position: fixed;
-      bottom: 12vh;
-      left: 3vw;
-      padding: 0.25rem 0.75rem;
-      nav {
+
+    div.menu_nav_footer {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      //側邊導覽列
+      nav.menu_nav {
+        padding: 0 2rem 30% 2rem;
         ul {
+          list-style: none;
           li {
-            display: flex;
-            flex-direction: column;
-            margin: 0.5rem 0.25rem;
-            list-style: none;
             a {
               border-radius: 5px;
-              padding: 0.5rem 1rem;
-              text-decoration: none;
+              padding: 0.7rem 1.25rem;
               color: #ffffff;
-              i {
-                margin-right: 0.5rem;
-                transition: all 0.3s ease;
+              text-decoration: none;
+              font-size: 1.5rem;
+              display: flex;
+              align-items: center;
+              margin: 0.5rem 0;
+              img {
+                width: 1.5vw;
+                margin-right: 1rem;
               }
-              &:hover {
-                background-color: #4b4b4b;
+            }
+            a.active {
+              background: linear-gradient(to right, #696969, #00000000);
+            }
+            &:hover {
+              a {
+                transition: all 0.5s ease;
+                background: linear-gradient(to right, #4b4b4b, #00000000);
               }
             }
           }
         }
       }
-    }
-    //使用者+登入按鈕
-    div.menu_footer {
-      border-top: #454545 1px solid;
-      display: flex;
-      margin: 0 2rem;
-      padding: 1.75rem 0rem;
-      justify-content: space-around;
-      align-items: center;
-      width: auto;
-      //使用者頭像+名稱
-      a.user {
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        div.user_icon {
-          width: 3.5vw;
-          height: 3.5vw;
-          border-radius: 50%;
-          background-color: #c3c3c3;
-          display: flex;
-          justify-content: center;
-          align-items: center;
 
-          img {
-            width: 3vw;
-            height: 3vw;
+      //使用者+登入按鈕
+      div.menu_footer {
+        border-top: #454545 1px solid;
+        display: flex;
+        margin: 0 2rem;
+        padding: 1.75rem 0rem;
+        justify-content: space-around;
+        align-items: center;
+        width: auto;
+        //使用者頭像+名稱
+        a.user {
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          div.user_icon {
+            width: 3.5vw;
+            height: 3.5vw;
+            border-radius: 50%;
+            background-color: #c3c3c3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+              width: 3vw;
+              height: 3vw;
+            }
+          }
+          p {
+            color: #ffffff;
+            font-size: 1.25rem;
+            margin: 0.75rem;
           }
         }
-        p {
+        //登入按鈕
+        a.log_in {
+          background-color: rgb(47, 99, 81);
+          padding: 0.3rem 1.25rem;
+          border-radius: 6px;
           color: #ffffff;
-          font-size: 1.25rem;
-          margin: 0.75rem;
-        }
-      }
-      //登入按鈕
-      a.log_in {
-        background-color: rgb(47, 99, 81);
-        padding: 0.3rem 1.25rem;
-        border-radius: 6px;
-        color: #ffffff;
-        text-decoration: none;
-        &:hover {
-          background-color: rgba(94, 193, 160, 0.8);
-          transform: scale(1.05);
-          transition: all 0.3s ease;
+          text-decoration: none;
+          &:hover {
+            background-color: rgba(94, 193, 160, 0.8);
+            transform: scale(1.05);
+            transition: all 0.3s ease;
+          }
         }
       }
     }
@@ -499,45 +473,7 @@ main {
             }
           }
         }
-        div.other {
-          border-top: #454545 1px solid;
-          display: flex;
-          background-color: transparent;
-          border-radius: 0px;
-          position: relative;
-          bottom: 0;
-          left: 0;
-          padding: 0.5rem;
-          nav {
-            ul {
-              hr {
-                display: none;
-              }
-              li {
-                display: flex;
-                flex-direction: column;
-                margin: 0rem 0.25rem;
-                list-style: none;
-                a {
-                  border-radius: 5px;
-                  padding: 0.5rem 1rem;
-                  font-size: 1rem;
-                  margin: 0.25rem 0;
-                  text-decoration: none;
-                  color: #ffffff;
-                  i {
-                    margin-right: 1rem;
-                    transition: all 0.3s ease;
-                    width: 15px;
-                  }
-                  &:hover {
-                    background-color: #4b4b4b;
-                  }
-                }
-              }
-            }
-          }
-        }
+
         div.menu_footer {
           margin: 0 0.25rem;
           padding: 0.75rem 0rem;

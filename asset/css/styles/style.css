@@ -62,7 +62,6 @@ main aside.menu {
   flex: 1.75;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   min-height: 85vh;
 }
 main aside.menu img.logo {
@@ -119,13 +118,19 @@ main aside.menu .menu_icon_area .menu-icon.open .menu-icon_hamburger:after {
   transform: translate(30px) rotate(-45deg);
   background: rgb(255, 255, 255);
 }
-main aside.menu nav.menu_nav {
+main aside.menu div.menu_nav_footer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main aside.menu div.menu_nav_footer nav.menu_nav {
   padding: 0 2rem 30% 2rem;
 }
-main aside.menu nav.menu_nav ul {
+main aside.menu div.menu_nav_footer nav.menu_nav ul {
   list-style: none;
 }
-main aside.menu nav.menu_nav ul li a {
+main aside.menu div.menu_nav_footer nav.menu_nav ul li a {
   border-radius: 5px;
   padding: 0.7rem 1.25rem;
   color: #ffffff;
@@ -135,46 +140,18 @@ main aside.menu nav.menu_nav ul li a {
   align-items: center;
   margin: 0.5rem 0;
 }
-main aside.menu nav.menu_nav ul li a img {
+main aside.menu div.menu_nav_footer nav.menu_nav ul li a img {
   width: 1.5vw;
   margin-right: 1rem;
 }
-main aside.menu nav.menu_nav ul li a.active {
+main aside.menu div.menu_nav_footer nav.menu_nav ul li a.active {
   background: linear-gradient(to right, #696969, rgba(0, 0, 0, 0));
 }
-main aside.menu nav.menu_nav ul li:hover a {
+main aside.menu div.menu_nav_footer nav.menu_nav ul li:hover a {
   transition: all 0.5s ease;
   background: linear-gradient(to right, #4b4b4b, rgba(0, 0, 0, 0));
 }
-main aside.menu div.other {
-  display: none;
-  background-color: #676269;
-  border-radius: 10px;
-  position: fixed;
-  bottom: 12vh;
-  left: 3vw;
-  padding: 0.25rem 0.75rem;
-}
-main aside.menu div.other nav ul li {
-  display: flex;
-  flex-direction: column;
-  margin: 0.5rem 0.25rem;
-  list-style: none;
-}
-main aside.menu div.other nav ul li a {
-  border-radius: 5px;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  color: #ffffff;
-}
-main aside.menu div.other nav ul li a i {
-  margin-right: 0.5rem;
-  transition: all 0.3s ease;
-}
-main aside.menu div.other nav ul li a:hover {
-  background-color: #4b4b4b;
-}
-main aside.menu div.menu_footer {
+main aside.menu div.menu_nav_footer div.menu_footer {
   border-top: #454545 1px solid;
   display: flex;
   margin: 0 2rem;
@@ -183,12 +160,12 @@ main aside.menu div.menu_footer {
   align-items: center;
   width: auto;
 }
-main aside.menu div.menu_footer a.user {
+main aside.menu div.menu_nav_footer div.menu_footer a.user {
   display: flex;
   align-items: center;
   text-decoration: none;
 }
-main aside.menu div.menu_footer a.user div.user_icon {
+main aside.menu div.menu_nav_footer div.menu_footer a.user div.user_icon {
   width: 3.5vw;
   height: 3.5vw;
   border-radius: 50%;
@@ -197,23 +174,23 @@ main aside.menu div.menu_footer a.user div.user_icon {
   justify-content: center;
   align-items: center;
 }
-main aside.menu div.menu_footer a.user div.user_icon img {
+main aside.menu div.menu_nav_footer div.menu_footer a.user div.user_icon img {
   width: 3vw;
   height: 3vw;
 }
-main aside.menu div.menu_footer a.user p {
+main aside.menu div.menu_nav_footer div.menu_footer a.user p {
   color: #ffffff;
   font-size: 1.25rem;
   margin: 0.75rem;
 }
-main aside.menu div.menu_footer a.log_in {
+main aside.menu div.menu_nav_footer div.menu_footer a.log_in {
   background-color: rgb(47, 99, 81);
   padding: 0.3rem 1.25rem;
   border-radius: 6px;
   color: #ffffff;
   text-decoration: none;
 }
-main aside.menu div.menu_footer a.log_in:hover {
+main aside.menu div.menu_nav_footer div.menu_footer a.log_in:hover {
   background-color: rgba(94, 193, 160, 0.8);
   transform: scale(1.05);
   transition: all 0.3s ease;
@@ -430,41 +407,6 @@ main section.content div.VSCODE div.vscode_window div.VSCODE_area {
     display: block;
     width: 15px;
     margin-right: 1rem;
-  }
-  main aside.menu div.menu_nav_footer div.other {
-    border-top: #454545 1px solid;
-    display: flex;
-    background-color: transparent;
-    border-radius: 0px;
-    position: relative;
-    bottom: 0;
-    left: 0;
-    padding: 0.5rem;
-  }
-  main aside.menu div.menu_nav_footer div.other nav ul hr {
-    display: none;
-  }
-  main aside.menu div.menu_nav_footer div.other nav ul li {
-    display: flex;
-    flex-direction: column;
-    margin: 0rem 0.25rem;
-    list-style: none;
-  }
-  main aside.menu div.menu_nav_footer div.other nav ul li a {
-    border-radius: 5px;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    margin: 0.25rem 0;
-    text-decoration: none;
-    color: #ffffff;
-  }
-  main aside.menu div.menu_nav_footer div.other nav ul li a i {
-    margin-right: 1rem;
-    transition: all 0.3s ease;
-    width: 15px;
-  }
-  main aside.menu div.menu_nav_footer div.other nav ul li a:hover {
-    background-color: #4b4b4b;
   }
   main aside.menu div.menu_nav_footer div.menu_footer {
     margin: 0 0.25rem;
