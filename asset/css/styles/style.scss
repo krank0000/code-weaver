@@ -10,6 +10,7 @@ body {
   height: 100%;
   overflow: hidden;
 }
+/*
 header {
   max-height: 15%;
   border-bottom: #6f6f6f 2px solid;
@@ -50,7 +51,111 @@ header {
       }
     }
   }
+}*/
+
+//新header
+header {
+  .header_container {
+    display: flex;
+    align-items: center;
+    border-bottom: #6f6f6f 2px solid;
+    height: 15vh;
+    //logo
+    img.logo {
+      min-width: 400px;
+      max-width: 537px;
+      padding: 1rem 3rem;
+    }
+    //頁面圖示
+    article {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      div {
+        width: 55px;
+        height: 55px;
+        margin: 0 0.25rem;
+        &.line {
+          height: 2px;
+          background-color: #636363;
+          border-radius: 5px;
+          &.line-strat {
+            position: relative;
+            display: flex;
+            align-items: center;
+            &::before {
+              content: " ";
+              width: 10px;
+              height: 10px;
+              position: absolute;
+              background-color: #636363;
+              border-radius: 50%;
+            }
+          }
+          &.line-end {
+            position: relative;
+            display: flex;
+            align-items: center;
+            &::after {
+              content: " ";
+              width: 10px;
+              height: 10px;
+              position: absolute;
+              right: 0;
+              background-color: #636363;
+              border-radius: 50%;
+            }
+          }
+        }
+        &.icon-area {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #636363;
+          border-radius: 100px;
+          img {
+            width: 35px;
+            padding: 0.25rem;
+            filter: brightness(0) saturate(100%) invert(48%) sepia(6%)
+              saturate(12%) hue-rotate(351deg) brightness(99%) contrast(84%);
+          }
+          &.active {
+            background-color: #c3c3c3;
+            img {
+              filter: brightness(0) saturate(100%) invert(8%) sepia(1%)
+                saturate(470%) hue-rotate(315deg) brightness(94%) contrast(93%);
+            }
+          }
+        }
+      }
+    }
+  }
+  //RWD
+  @media screen and (max-height: 822px) {
+    .header_container {
+      //頁面圖示
+      article {
+        div {
+          width: 45px;
+          height: 45px;
+          margin: 0 0.25rem;
+          &.line {
+            height: 2px;
+            border-radius: 5px;
+          }
+          &.icon-area {
+            img {
+              width: 30px;
+              padding: 0.25rem;
+            }
+          }
+        }
+      }
+    }
+  }
 }
+
 main {
   max-height: 85vh;
   display: flex;
@@ -60,6 +165,7 @@ main {
     flex: 1.75;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     min-height: 85vh;
 
     img.logo {
@@ -76,7 +182,7 @@ main {
 
     //菜單按鈕
     .menu_icon_area {
-      visibility: hidden;
+      display: none;
       .menu-icon {
         width: 60px;
         height: 60px;
@@ -137,10 +243,10 @@ main {
       height: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: space-around;
       //側邊導覽列
       nav.menu_nav {
-        padding: 0 2rem 30% 2rem;
+        padding: 0 2rem;
         ul {
           list-style: none;
           li {
@@ -152,10 +258,24 @@ main {
               font-size: 1.5rem;
               display: flex;
               align-items: center;
-              margin: 0.5rem 0;
+              margin: 0.25rem 0;
               img {
-                width: 1.5vw;
+                width: 1.5rem;
                 margin-right: 1rem;
+              }
+              //RWD
+              @media screen and (max-width: 1400px) {
+                font-size: 1.25rem;
+              }
+              @media screen and (max-width: 1227px) {
+                img {
+                  display: none;
+                }
+              }
+              @media screen and (max-height: 800px) {
+                font-size: 1.25rem;
+                margin: 0.25rem 0;
+                padding: 0.5rem 1.25rem;
               }
             }
             a.active {
@@ -186,8 +306,9 @@ main {
           align-items: center;
           text-decoration: none;
           div.user_icon {
-            width: 3.5vw;
-            height: 3.5vw;
+            --user_icon_w: 60px;
+            width: var(--user_icon_w);
+            height: var(--user_icon_w);
             border-radius: 50%;
             background-color: #c3c3c3;
             display: flex;
@@ -195,8 +316,8 @@ main {
             align-items: center;
 
             img {
-              width: 3vw;
-              height: 3vw;
+              width: calc(var(--user_icon_w) * 0.8);
+              height: calc(var(--user_icon_w) * 0.8);
             }
           }
           p {
@@ -216,6 +337,29 @@ main {
             background-color: rgba(94, 193, 160, 0.8);
             transform: scale(1.05);
             transition: all 0.3s ease;
+          }
+        }
+        //RWD
+        @media screen and (max-width: 1430px) {
+          padding: 1rem 0rem;
+          a.user {
+            p {
+              font-size: 1rem;
+            }
+            div.user_icon {
+              --user_icon_w: 50px;
+            }
+          }
+          a.log_in {
+            padding: 0.3rem 1rem;
+            font-size: 1rem;
+          }
+        }
+        @media screen and (max-width: 1430px) {
+          a.user {
+            p {
+              display: none;
+            }
           }
         }
       }
@@ -285,54 +429,6 @@ main {
   div.RWD_empty {
     width: 5vw;
   }
-  header {
-    max-height: 12%;
-    border-bottom: #6f6f6f 2px solid;
-    div.header_container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      img.logo {
-        flex: 2;
-        padding: 0rem 3rem;
-        width: 10vw;
-      }
-      section {
-        flex: 5;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        img.line {
-          width: 3vw;
-        }
-        div.header_icon {
-          width: 3.5vw;
-          height: 3.5vw;
-          background-color: #636363;
-          border-radius: 50%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin: 1rem;
-          padding: 0.5rem;
-        }
-        div.active {
-          background-color: #c3c3c3;
-          path {
-            stroke: #2c292d;
-          }
-        }
-      }
-    }
-    div.header_line {
-      margin: 0 3rem;
-      display: flex;
-      justify-content: center;
-      position: relative;
-      top: -20px;
-    }
-  }
 }
 
 @media screen and (max-width: 1720px) {
@@ -381,27 +477,6 @@ main {
     }
   }
 }
-//當畫面縮小使用者頭像+名稱會跑版
-@media screen and (max-width: 1310px) {
-  main {
-    aside.menu {
-      ul {
-        li {
-          a {
-            font-size: 1rem;
-          }
-        }
-      }
-      div.menu_footer {
-        a.user {
-          p {
-            display: none;
-          }
-        }
-      }
-    }
-  }
-}
 
 //平板手機版
 @media screen and (max-width: 1140px) {
@@ -428,7 +503,7 @@ main {
         max-height: 268px;
       }
       .menu_icon_area {
-        visibility: visible;
+        display: block;
         flex: 1;
         .menu-icon {
           width: 35px;
@@ -480,11 +555,12 @@ main {
           padding: 0.75rem 0rem;
           a.user {
             div.user_icon {
-              width: 15px;
-              height: 15px;
+              --user_icon_w: 40px;
+              width: var(--user_icon_w);
+              height: var(--user_icon_w);
               img {
-                width: 15px;
-                height: 15px;
+                width: calc(var(--user_icon_w) * 0.8);
+                height: calc(var(--user_icon_w) * 0.8);
               }
             }
             p {

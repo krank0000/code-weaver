@@ -57,7 +57,7 @@ main section.content div.main_content div.switch_index div.main_index {
 }
 main section.content div.main_content div.switch_index div.main_index div.chat_area {
   width: 80%;
-  margin-top: 2rem;
+  margin-top: 1vh;
   max-height: 68vh;
   overflow: auto;
   overflow-x: hidden;
@@ -104,7 +104,7 @@ main section.content div.main_content div.switch_index div.main_index div.chat_a
 }
 main section.content div.main_content div.switch_index div.main_index div.message {
   position: fixed;
-  bottom: 2rem;
+  bottom: 2vh;
   left: 58%;
   transform: translateX(-50%);
   display: flex;
@@ -146,7 +146,7 @@ main section.content div.main_content div.switch_index div.main_index div.messag
   transition: all 0.5s ease;
 }
 main section.content div.main_content div.switch_requirement div.main_requirement {
-  margin-top: 2rem;
+  margin-top: 1vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -156,14 +156,14 @@ main section.content div.main_content div.switch_requirement div.main_requiremen
   color: #ffffff;
   font-weight: normal;
   letter-spacing: 1.5rem;
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 main section.content div.main_content div.switch_requirement div.main_requirement div.document_area {
   background-color: #222222;
   border: #c5c5c5 2px solid;
   color: #ffffff;
   width: 80%;
-  margin-top: 2rem;
+  margin: 2vh;
   padding: 1rem 1.5rem;
   border-radius: 25px;
 }
@@ -174,7 +174,6 @@ main section.content div.main_content div.switch_requirement div.main_requiremen
   padding: 1rem;
 }
 main section.content div.main_content div.switch_requirement div.main_requirement section {
-  margin-top: 2rem;
   width: 80%;
   display: flex;
   justify-content: space-around;
@@ -200,7 +199,7 @@ main section.content div.main_content div.switch_requirement div.main_requiremen
   background-color: #78c576;
 }
 main section.content div.main_content div.switch_system div.main_system {
-  margin-top: 2rem;
+  margin-top: 1vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -210,14 +209,14 @@ main section.content div.main_content div.switch_system div.main_system h1 {
   color: #ffffff;
   font-weight: normal;
   letter-spacing: 1.5rem;
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 main section.content div.main_content div.switch_system div.main_system div.document_area {
   background-color: #222222;
   border: #c5c5c5 2px solid;
   color: #ffffff;
   width: 80%;
-  margin-top: 2rem;
+  margin: 2vh;
   padding: 1rem 1.5rem;
   border-radius: 25px;
 }
@@ -228,7 +227,6 @@ main section.content div.main_content div.switch_system div.main_system div.docu
   padding: 1rem;
 }
 main section.content div.main_content div.switch_system div.main_system section {
-  margin-top: 2rem;
   width: 80%;
   display: flex;
   justify-content: space-around;
@@ -354,7 +352,7 @@ main section.content div.main_content div.switch_dataflow div.main_dataflow sect
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-width: 30vw;
+  width: 300px;
   padding: 2rem;
   margin: 1rem;
   border-radius: 25px;
@@ -615,10 +613,9 @@ main section.content div.main_content div.switch_test div.main_test .back_btn {
   }
   main section.content div.main_content div.switch_dataflow div.main_dataflow {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     width: 100%;
     height: 75vh;
   }
@@ -626,8 +623,7 @@ main section.content div.main_content div.switch_test div.main_test .back_btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 60vw;
-    max-width: 80vw;
+    height: 200px;
     padding: 1rem;
     margin: 1rem;
     border-radius: 25px;
@@ -636,8 +632,8 @@ main section.content div.main_content div.switch_test div.main_test .back_btn {
     background: linear-gradient(to right, #514e52, #2c292d);
   }
   main section.content div.main_content div.switch_dataflow div.main_dataflow section img {
-    width: 20vw;
-    margin: 1.5rem 0;
+    width: 90px;
+    margin: 1rem 0;
   }
   main section.content div.main_content div.switch_dataflow div.main_dataflow section input.test_file {
     border: none;

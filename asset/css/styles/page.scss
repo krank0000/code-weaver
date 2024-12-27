@@ -66,7 +66,7 @@ main {
           justify-content: space-between;
           div.chat_area {
             width: 80%;
-            margin-top: 2rem;
+            margin-top: 1vh;
             max-height: 68vh;
             overflow: auto;
             overflow-x: hidden;
@@ -116,7 +116,7 @@ main {
           //輸入需求訊息
           div.message {
             position: fixed;
-            bottom: 2rem;
+            bottom: 2vh;
             left: 58%;
             transform: translateX(-50%);
             display: flex;
@@ -165,7 +165,7 @@ main {
       //requirement.html 需求規格書
       div.switch_requirement {
         div.main_requirement {
-          margin-top: 2rem;
+          margin-top: 1vh;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -174,14 +174,14 @@ main {
             color: #ffffff;
             font-weight: normal;
             letter-spacing: 1.5rem;
-            font-size: 2rem;
+            font-size: 1.75rem;
           }
           div.document_area {
             background-color: #222222;
             border: #c5c5c5 2px solid;
             color: #ffffff;
             width: 80%;
-            margin-top: 2rem;
+            margin: 2vh;
             padding: 1rem 1.5rem;
             border-radius: 25px;
             .document {
@@ -192,7 +192,6 @@ main {
             }
           }
           section {
-            margin-top: 2rem;
             width: 80%;
             display: flex;
             justify-content: space-around;
@@ -223,7 +222,7 @@ main {
       //system.html 系統規格書
       div.switch_system {
         div.main_system {
-          margin-top: 2rem;
+          margin-top: 1vh;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -232,14 +231,14 @@ main {
             color: #ffffff;
             font-weight: normal;
             letter-spacing: 1.5rem;
-            font-size: 2rem;
+            font-size: 1.75rem;
           }
           div.document_area {
             background-color: #222222;
             border: #c5c5c5 2px solid;
             color: #ffffff;
             width: 80%;
-            margin-top: 2rem;
+            margin: 2vh;
             padding: 1rem 1.5rem;
             border-radius: 25px;
             .document {
@@ -250,7 +249,6 @@ main {
             }
           }
           section {
-            margin-top: 2rem;
             width: 80%;
             display: flex;
             justify-content: space-around;
@@ -391,7 +389,7 @@ main {
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-width: 30vw;
+            width: 300px;
             padding: 2rem;
             margin: 1rem;
             border-radius: 25px;
@@ -705,18 +703,19 @@ main {
         div.switch_dataflow {
           div.main_dataflow {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            // flex-direction: column;
+            justify-content: space-around;
             align-items: center;
-            flex-wrap: nowrap;
+            flex-wrap: wrap;
             width: 100%;
             height: 75vh;
             section {
               display: flex;
               align-items: center;
               justify-content: center;
-              min-width: 60vw;
-              max-width: 80vw;
+              // min-width: 60vw;
+              // max-width: 80vw;
+              height: 200px;
               padding: 1rem;
               margin: 1rem;
               border-radius: 25px;
@@ -725,8 +724,8 @@ main {
               background: linear-gradient(to right, #514e52, #2c292d);
 
               img {
-                width: 20vw;
-                margin: 1.5rem 0;
+                width: 90px;
+                margin: 1rem 0;
               }
               input.test_file {
                 border: none;
